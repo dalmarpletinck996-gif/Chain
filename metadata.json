@@ -1,0 +1,6 @@
+{
+  "name": "SacredSeat",
+  "description": "Minimalist focus and Chained Time-Delay Protocol (CTDP) manager with an ironclad Case Law system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

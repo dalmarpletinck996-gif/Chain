@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght=0,300;0,400;0,500;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    background-color: #0A0A0A;
+    color: #f4f4f5; /* zinc-100 */
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Tactical Glassmorphism & Cyber Monospace aesthetics from Design */
+.tactical-border {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.15);
+  text-shadow: 0 0 8px rgba(220, 38, 38, 0.3);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.15);
+  text-shadow: 0 0 8px rgba(34, 197, 94, 0.3);
+}
+
+.glow-amber {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.12);
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.25);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #09090b; /* zinc-950 */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #27272a; /* zinc-800 */
+  border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46; /* zinc-700 */
+}
+
+@keyframes grid-pulse {
+  0% { opacity: 0.03; }
+  50% { opacity: 0.07; }
+  100% { opacity: 0.03; }
+}
+
+.tactical-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+  animation: grid-pulse 6s infinite ease-in-out;
+}
+
+/* Base structural font scale */
+@layer base {
+  html {
+    font-size: 19.5px; /* Significantly increase standard REM root to make all layout elements scale beautifully */
+  }
+}
+
+/* System-Wide Typography Upscaling overrides for perfect visual comfort */
+@layer utilities {
+  .text-\[9px\] {
+    font-size: 13.5px !important;
+  }
+  .text-\[10px\] {
+    font-size: 14.5px !important;
+  }
+  .text-\[10\.5px\] {
+    font-size: 15.0px !important;
+  }
+  .text-\[11px\] {
+    font-size: 15.5px !important;
+  }
+  .text-[10px] {
+    font-size: 14.5px !important;
+  }
+  .text-[9px] {
+    font-size: 13.5px !important;
+  }
+  .text-xs {
+    font-size: 16.5px !important; /* increased from 14px */
+  }
+  .text-sm {
+    font-size: 18.5px !important; /* increased from 15.5px */
+  }
+  .text-base {
+    font-size: 21.0px !important; /* increased from 18px */
+  }
+  .text-lg {
+    font-size: 23.5px !important; /* increased from 20px */
+  }
+  .text-xl {
+    font-size: 27.0px !important; /* increased from 23px */
+  }
+  .text-2xl {
+    font-size: 31.0px !important; /* increased from 26.5px */
+  }
+  .text-3xl {
+    font-size: 40.0px !important; /* increased from 34px */
+  }
+  .text-4xl {
+    font-size: 49.0px !important; /* increased from 42px */
+  }
+  .text-5xl {
+    font-size: 61.0px !important; /* increased from 54px */
+  }
+}
+
